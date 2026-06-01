@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(100, 200, 255, 0.8);
+    color: #64c8ff;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 40px;
+    font-size: 1.2em;
+}
+
+.player-score,
+.ai-score {
+    background: rgba(100, 200, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #64c8ff;
+    min-width: 120px;
+}
+
+.player-score p:first-child,
+.ai-score p:first-child {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.player-score p:last-child,
+.ai-score p:last-child {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #64c8ff;
+}
+
+.score-separator {
+    font-size: 1.5em;
+    color: #64c8ff;
+    opacity: 0.6;
+}
+
+#pongCanvas {
+    background: linear-gradient(to right, #0a0e27 0%, #16213e 50%, #0a0e27 100%);
+    border: 3px solid #64c8ff;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(100, 200, 255, 0.5);
+    cursor: none;
+}
+
+.controls {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.controls p {
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #pongCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .scoreboard {
+        gap: 20px;
+    }
+
+    .player-score,
+    .ai-score {
+        min-width: 100px;
+        padding: 15px 20px;
+    }
+}
